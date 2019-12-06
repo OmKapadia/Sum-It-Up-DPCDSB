@@ -1,0 +1,17 @@
+let keywords ={
+  god: 'keyWord God',
+  jerusalum: 'keyword Jersusalem',
+  jesus: 'keyword Jesus',
+  miracle: 'keyword Miracle',
+  //Put More Keywords**
+ 
+}
+function searchKeywords(text){
+  let keys = Object.keys(keywords)
+  let re = new RegExp('(' +keys.join('|') +')', 'g')
+                      
+  return text.toLowerCase().match(re)
+}
+var person = prompt("Enter Some Text");
+
+console.log(searchKeywords(person))
